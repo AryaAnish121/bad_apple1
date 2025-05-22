@@ -235,4 +235,5 @@ dist
 .pnp.*
 
 input_img
+output_img
 input.mp4
