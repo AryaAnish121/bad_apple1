@@ -74,9 +74,14 @@ def ascii_to_image(text: str, font: ImageFont.FreeTypeFont = base_font) -> Image
         >>> image = ascii_to_image("Hello World")
         >>> image.save("hello_world.png")
     """
-    text_image = Image.new("RGB", sizeof(text, font))
+
+    text_color = (116, 107, 101)
+    background_color = (190, 180, 171)
+
+
+    text_image = Image.new("RGB", sizeof(text, font), background_color)
     draw = ImageDraw.Draw(text_image)
-    draw.text((0, 0), text, (255, 255, 255), font)
+    draw.text((0, 0), text, text_color, font)
     return text_image
 
 
